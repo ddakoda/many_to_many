@@ -1,0 +1,11 @@
+psql
+
+CREATE DATABASE many;
+
+\c many;
+
+CREATE TABLE chirps (id SERIAL PRIMARY KEY, name VARCHAR(255));
+
+CREATE TABLE locations (id SERIAL PRIMARY KEY, chirp_id INTEGER, name VARCHAR(255)); #REFERENCES - taken out of INTEGRER
+
+CREATE TABLE visits (id SERIAL PRIMARY KEY, chirp_id INTEGER, location_id INTEGER, name VARCHAR(255)); #REFERENCES and REFERENCES
